@@ -1,5 +1,5 @@
 {
-    "name": "lacma2011/battlenetstate",
+    "name": "lacma2011/socialiteproviders",
     "description": "Battlenet OAuth2 Provider for Laravel Socialite, with region in state",
     "license": "MIT",
     "authors": [{
