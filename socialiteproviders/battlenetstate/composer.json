@@ -1,0 +1,19 @@
+{
+    "name": "lacma2011/battlenetstate",
+    "description": "Battlenet OAuth2 Provider for Laravel Socialite, with region in state",
+    "license": "MIT",
+    "authors": [{
+        "name": "p. jerome bordallo",
+        "email": "github@lacma2011"
+    }],
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "socialiteproviders/manager": "~2.0 || ~3.0",
+        "socialiteproviders/battlenet": "~1.0 || ~2.0 || ~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lacma2011\\SocialiteProviders\\BattlenetState\\": ""
+        }
+    }
+}
