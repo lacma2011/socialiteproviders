@@ -3,7 +3,6 @@
 namespace Lacma2011\SocialiteProviders\BattlenetState;
 
 use SocialiteProviders\Battlenet\Provider as BattlenetProvider;
-use SocialiteProviders\Manager\OAuth2\User;
 
 /**
  *  How to use state with Socialite providers, thanks to
@@ -56,13 +55,9 @@ class Provider extends BattlenetProvider
 
     protected function mapUserToObject(array $user)
     {
-        return (new User)->setRaw($user)->map([
-            // Data here will vary from provider to provider.
-            'id'    => $user['id'],
-            'battletag' => $user['battletag'],
-            // We add the extracted URL here so it can be access from the controller
-            'region' => $this->stateRegion,
-        ]);
+        $extended_user = parent::mapUserToObject($user);
+        $extended_user->region = $this->stateRegion;
+        return $extended_user;
     }
     
 }
