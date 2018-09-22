@@ -59,9 +59,7 @@ class Provider extends BattlenetProvider
         return (new User)->setRaw($user)->map([
             // Data here will vary from provider to provider.
             'id'    => $user['id'],
-            'email' => $user['email'],
-            'nickname'    => $user['nickname'],
-            'name' => $user['name'],
+            'battletag' => $user['battletag'],
             // We add the extracted URL here so it can be access from the controller
             'region' => $this->stateRegion,
         ]);
