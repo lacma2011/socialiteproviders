@@ -20,7 +20,7 @@ class Provider extends BattlenetProvider
         return $this;
     }
 
-    protected function getRegion()
+    protected function getState()
     {
         // The state becomes a JSON object with both the XRSF protection token and the url
         return json_encode([
@@ -60,8 +60,10 @@ class Provider extends BattlenetProvider
             // Data here will vary from provider to provider.
             'id'    => $user['id'],
             'email' => $user['email'],
+            'nickname'    => $user['nickname'],
+            'name' => $user['name'],
             // We add the extracted URL here so it can be access from the controller
-            'previous_url' => $this->stateRegion,
+            'region' => $this->stateRegion,
         ]);
     }
     
